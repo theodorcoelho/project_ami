@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Campanha</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Cadastro de Campanha</h1>
+                <form id="form-campanha">
+                    <fieldset>
+                        <legend>Insira os valores da campanha</legend>
+                        <div class="mb-3">
+                            <label for="nomeCampanha" class="form-label">Nome da Campanha</label>
+                            <input type="text" class="form-control" id="nomeCampanha" maxlength="20" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorTotal" class="form-label">Valor Total da Campanha (BRL)</label>
+                            <input type="number" class="form-control" id="valorTotal" step="0.01" required>
+                        </div>
+                        <div class="mb-3"></div>
+                            <label for="tipoContrato" class="form-label">Tipo de Contrato</label>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="tipoContratoPadrao" name="tipoContrato" value="padrao" checked>
+                                <label class="form-check-label" for="tipoContratoPadrao">Padrão</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="tipoContratoExclusividade" name="tipoContrato" value="exclusividade">
+                                <label class="form-check-label" for="tipoContratoExclusividade">Exclusividade</label>
+                            </div>
+                        <div class="mb-3">
+                            <label for="valorInfluenciador" class="form-label">Valor do Influenciador</label>
+                            <input type="text" class="form-control" id="valorInfluenciador" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorAgencia" class="form-label">Valor da Agência</label>
+                            <input type="text" class="form-control" id="valorAgencia" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorImposto" class="form-label">Valor Imposto</label>
+                            <input type="text" class="form-control" id="valorImposto" disabled>
+                        </div>
+                        
+                    </fieldset>
+                    <fieldset>
+                        <legend>Divisão de Lucros</legend>
+                        <div class="mb-3">
+                            <label for="valorMariana" class="form-label">Valor para Mariana</label>
+                            <input type="text" class="form-control" id="valorMariana" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorSophie" class="form-label">Valor para Sophie</label>
+                            <input type="text" class="form-control" id="valorSophie" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorTata" class="form-label">Valor para Tata</label>
+                            <input type="text" class="form-control" id="valorTata" disabled>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary" disabled>Cadastrar Campanha</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
